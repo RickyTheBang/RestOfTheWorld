@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+
+<request-character-encoding>UTF-8</request-character-encoding>
+    <response-character-encoding>UTF-8</response-character-encoding>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>H03_P04__DoPost</servlet-name>
+        <jsp-file>/boekHoofdstukken/H03/P04/deMethodePost/post.html</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>H03_P04__DoPost</servlet-name>
+        <url-pattern>/potsHTML</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>H04_Opdracht01</servlet-name>
+        <jsp-file>/boekOpdrachten/H04/Opdracht01/H04_Opdracht01_FirstServlet.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>H04_Opdracht01</servlet-name>
+        <url-pattern>/H04_Opdracht01_FirstServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>H04P04_Scriptlet</servlet-name>
+        <jsp-file>/boekHoofdstukken/H04/P04_Scripting/H04P04_Scriptlet.jsp</jsp-file>
+    </servlet>
+
+
+
+    <servlet-mapping>
+        <servlet-name>H04P04_Scriptlet</servlet-name>
+        <url-pattern>/H04P04_theScriptlet</url-pattern>
+    </servlet-mapping>
+
+         <servlet>
+            <servlet-name>H03_Opdracht04_GuestBookServlet</servlet-name>
+            <servlet-class>boekOpdrachten.H03_Opdracht04_V1.GuestBookServlet</servlet-class>
+            <init-param>
+                <param-name>driver</param-name>
+                <param-value>org.mariadb.jdbc.Driver</param-value>
+            </init-param>
+            <init-param>
+                <param-name>url</param-name>
+                <param-value>jdbc:mariadb://noelvaes.eu/StudentDB</param-value>
+            </init-param>
+            <init-param>
+                <param-name>user</param-name>
+                <param-value>student</param-value>
+            </init-param>
+            <init-param>
+                <param-name>password</param-name>
+                <param-value>student123</param-value>
+            </init-param>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>H03_Opdracht04_GuestBookServlet</servlet-name>
+            <url-pattern>/GuestBookServlet_V01</url-pattern>
+        </servlet-mapping>
+
+
+
+    </web-app>
