@@ -1,4 +1,4 @@
-package boekOpdrachten.H03_Opdracht05_CalculatorServlet.model;
+package classOefeningen.H04.model;
 
 public class CalculatorApp {
 

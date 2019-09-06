@@ -1,4 +1,4 @@
-package boekOpdrachten.H03_Opdracht05_CalculatorServlet.controller;
+package classOefeningen.H04.servlet;
 
 import boekOpdrachten.H03_Opdracht05_CalculatorServlet.model.Calculator;
 
@@ -11,10 +11,10 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/Calculator")
-public class CalculatorServlet extends HttpServlet {
-    private final String RESULT = "CalculatorServlet.result";
+@WebServlet("/HelloCalculator")
+public class HelloCalculatorController  extends HttpServlet {private final String RESULT = "CalculatorServlet.result";
     private final String NUMBER = "number";
+    private final String CALCULATOR = "calculator";
     private final String OPERATION = "operation";
     private Calculator calculator = new Calculator ( );
     @Override
@@ -32,30 +32,9 @@ public class CalculatorServlet extends HttpServlet {
             message = (String) messageAttribute;
         }
 
-        resp.setContentType ("text/html");
-        resp.setCharacterEncoding ("UTF-8");
-        try (PrintWriter out = resp.getWriter ( )) {
-            out.println ("<html><head>");
-            out.println ("<title>Calculator</title>");
-            out.println ("</head><body>");
-            out.print ("<form method='POST'>");
-            out.print (message + "<br/>");
-            out.print ("Result: <br/>");
-            for(String s :calculator.getHistory () ){
-                out.print ( s + "<br/>");
-            }
 
+        req.getRequestDispatcher ("WEB-INF/pages/classOefeningen/helloCalculatorServlet.jsp").forward (req,resp);
 
-
-
-            out.print ("<input type='number' name='number' /><br />");
-            out.print ("<button name='operation' type='submit' value='+'>+</button>");
-            out.print ("<button name='operation' type='submit' value='-'>-</button>");
-            out.print ("<button name='operation' type='submit' value='*'>*</button>");
-            out.print ("<button name='operation' type='submit' value='/'>/</button>");
-            out.print ("<button name='operation' type='submit' value='CE'>CE</button>");
-            out.print ("</form></body></html>");
-        }
     }
 
     @Override
@@ -92,7 +71,10 @@ public class CalculatorServlet extends HttpServlet {
             }
         }
         req.setAttribute ("message", message);
-        session.setAttribute (RESULT, result);
+       // req.setAttribute ("result", result);
+       // req.setAttribute ("calculator", calculator);
+        session.setAttribute ("result", result);
+        session.setAttribute(CALCULATOR,calculator);
         doGet (req, resp);
     }
 }
