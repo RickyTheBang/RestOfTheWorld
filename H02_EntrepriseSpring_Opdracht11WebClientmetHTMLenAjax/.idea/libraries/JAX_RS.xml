@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="JAX-RS" type="JAX-RS">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/plugins/restWebServices/lib/rs.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/plugins/restWebServices/lib/ws-rt.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/plugins/restWebServices/lib/ws-utils.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

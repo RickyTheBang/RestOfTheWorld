@@ -1,0 +1,59 @@
+GET http://localhost:8080/messages/1
+Response: Content-Type: application/xml
+
+###
+
+GET http://localhost:8080/messages/1
+Response: Content-Type: application/xml
+
+###
+
+GET http://localhost:8080/messages/1
+Response: Content-Type: application/xml
+
+###
+
+GET http://localhost:8080/messages/1
+Response: Content-Type: application/xml
+
+<> 2019-10-23T095536.200.json
+
+###
+
+GET http://localhost:8080/messages/1
+Response: Content-Type: application/json
+
+<> 2019-10-23T095528.200.json
+
+###
+
+GET curl%20-X%20GET%20-H%20'Response:Content-Type:%20application/json'%20-i%20http://localhost:8080/messages/1
+
+###
+
+GET curl%20-X%20GET%20-H%20'Response:Content-Type:%20application/json'%20-i%20http://localhost:8080/messages/1
+
+###
+
+GET curl%20-X%20GET%20-H%20'Response:Content-Type:%20application/json'%20-i%20http://localhost:8080/messages/1
+
+###
+
+GET curl%20-X%20GET%20-H%20'Response:Content-Type:%20application/json'%20-i%20http://localhost:8080/messages/1
+
+###
+
+GET curl%20-X%20GET%20-H%20'Response:Content-Type:%20application/json'%20-i%20http://localhost:8080/messages/1
+GET http:
+Response: Content-Type: application/json
+
+###
+
+GET http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-10-23T095338.404.json
+
+###
+

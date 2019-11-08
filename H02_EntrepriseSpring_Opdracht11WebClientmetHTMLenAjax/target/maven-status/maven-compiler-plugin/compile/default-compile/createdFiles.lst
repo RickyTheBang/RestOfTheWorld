@@ -1,0 +1,6 @@
+RESTfulWebServicesOpdracht10\application\MessageServerApp.class
+RESTfulWebServicesOpdracht10\controller\MessageRestController.class
+RESTfulWebServicesOpdracht10\model\Message.class
+RESTfulWebServicesOpdracht10\repository\implementation\MessageRepositoryImpl.class
+RESTfulWebServicesOpdracht10\AppConfig.class
+RESTfulWebServicesOpdracht10\repository\MessageRepository.class
